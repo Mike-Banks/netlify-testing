@@ -20,11 +20,16 @@
         oninput="//this.form.element['subject'].value = '' // Used to update the 'subject' input for netlify emails (not using Zapier)
         "/></label>
     </p>
+    <p>
+      <label>Message: <textarea name="message"></textarea></label>
+    </p>
     
     <!--
       <input hidden type="text" name="subject" value="Website Email"/>
     -->
     
+    <!-- Dropdown example - shows as 'Role: [Leader]' in email-->
+
     <!--
     <p>
       <label>Your Role: <select name="role[]" multiple>
@@ -33,9 +38,7 @@
       </select></label>
     </p>
     -->
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
+
     <p>
       <button type="submit">Send</button>
     </p>
