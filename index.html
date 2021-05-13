@@ -6,7 +6,8 @@
 <a href="test.html">click me for test</a>
 
 <div class="container">
-  <form name="contact" method="POST" data-netlify="true">
+    <!-- The action points to the formspree.io service - if not using the service, leave blank -->
+  <form name="contact" method="POST" data-netlify="true" action="https://formspree.io/f/mbjqggok">
     <p>
       <label>Your Name: <input type="text" name="name" /></label>   
     </p>
@@ -14,8 +15,15 @@
       <label>Your Email: <input type="email" name="email" /></label>
     </p>
     <p>
-      <label>Subject: <input type="text" name="subject" /></label>
+      <label>Subject: <input type="text" name="EmailSubject" 
+        oninput="//this.form.element['subject'].value = '' // Used to update the 'subject' input for netlify emails (not using Zapier)
+        "/></label>
     </p>
+    
+    <!--
+      <input hidden type="text" name="subject" value="Website Email"/>
+    -->
+    
     <!--
     <p>
       <label>Your Role: <select name="role[]" multiple>
